@@ -5,33 +5,17 @@ import LocationCard from './businessInfo/LocationCard'
 import EmployeeCard from './businessInfo/EmployeeCard'
 import OwnerCard from './businessInfo/OwnerCard'
 import NavBar from './nav/NavBar'
-
+import ApplicationViews from './ApplicationViews.js'
 
 class Kennel extends Component {
     render() {
         return (
-            <div>
-                <div>
-                    <NavBar />
-                </div>
-                <div>
-                    <h2>Student Kennels<br />
-                        <small>Loving care when you're not there.</small>
-                    </h2>
-                    <LocationCard />
-                </div>
-                <div>
-                    <AnimalCard />
-                    <AnimalCard />
-                    <AnimalCard />
-                </div>
-                <div>
-                    <EmployeeCard />
-                </div>
-                <div>
-                    <OwnerCard />
-                </div>
-            </div>
+
+            <React.Fragment>
+                <NavBar />
+                <ApplicationViews />
+            </React.Fragment>
+
         );
     }
 }
