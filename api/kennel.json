@@ -1,0 +1,93 @@
+{
+    "animals": [
+        {
+            "id": 1,
+            "name": "Doodles",
+            "breed": "Poodle"
+        },
+        {
+            "id": 2,
+            "name": "Decker",
+            "breed": "German Sheperd"
+        },
+        {
+            "id": 3,
+            "name": "Esme",
+            "breed": "Pitbull"
+        }
+    ],
+    "employees": [
+        {
+            "id": 1,
+            "name": "Brandy Mitchell",
+            "position": "Manager",
+            "image": "https://i.pinimg.com/236x/39/45/42/394542b19ead513e202151da20aebf9f--boho-beautiful-beautiful-clothes.jpg",
+            "alt": "Manager"
+        },
+        {
+            "id": 2,
+            "name": "Leon Markham",
+            "position": "Nail Clipper",
+            "image": "https://vignette.wikia.nocookie.net/napoleondynamite/images/0/04/Kip_Dynamite.jpg/revision/latest?cb=20120117222921",
+            "alt": "Nails"
+
+        },
+        {
+            "id": 3,
+            "name": "Toodles McGee",
+            "position": "Fur Brusher",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/BettyWhiteJune09.jpg/200px-BettyWhiteJune09.jpg",
+            "alt": "Fur Brusher"
+        },
+        {
+            "id": 4,
+            "name": "Mica Smith",
+            "position": "Bath Giver",
+            "image": "https://m.media-amazon.com/images/M/MV5BNjY2NWE3NjUtODM3Ni00ZDRlLTg4YjEtYmFmZGRjY2UyYTY3XkEyXkFqcGdeQXVyMTEwODg2MDY@._V1_.jpg",
+            "alt": "Bath Giver"
+        },
+        {
+            "id": 5,
+            "name": "Sigmund Von Fried",
+            "position": "Dog Therapist",
+            "image": "https://thepsychologist.bps.org.uk/sites/thepsychologist.bps.org.uk/files/freud.jpg",
+            "alt": "Therapist"
+        }
+    ],
+    "locations": [
+        {
+            "id": 1,
+            "name": "North Nashville"
+        },
+        {
+            "id": 2,
+            "name": "West Nashville"
+        }
+    ],
+    "owners": [
+        {
+            "id": 1,
+            "phone": "615-867-5309",
+            "name": "Buster Boots",
+            "about": "After a shoulder industry ended his illustrious junior high school football career, Buster decided to seek his fortune elseware. He majored in Business and Hemp Weaving in college, and his endeavors include a failed pizza venture, failed ski travel company, and failed hemp commune. At the age of 47 after a divorce, he turned over a new leaf, finally got rid of his bangs, remembered his love of dogs, and decided to open a kennel.",
+            "image": "https://vignette.wikia.nocookie.net/napoleondynamite/images/d/de/Uncle_Rico.jpg/revision/latest?cb=20120117222806",
+            "alt": "Buster Dog Owner" 
+        },
+        {
+            "id": 2,
+            "name": "Scooter Brown",
+            "about": "Part-time handyman. Business slogan: 50% of the time, it works all the time.",
+            "image": "https://ca-times.brightspotcdn.com/dims4/default/704506d/2147483647/strip/true/crop/640x360+0+0/resize/840x473!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fc7%2Fd2%2Fd7418b424cd636bdeb0da6cdc060%2Fla-xpm-photo-2013-oct-07-la-et-ct-will-ferrell-ron-burgundy-dodge-ads-20131007",
+            "alt": "Scooter Dog Owner"
+        },
+        {
+            "id": 3,
+            "name": "Anastasia Manishnikov",
+            "about": "Secret Russian Tzarina",
+            "image": "https://s.yimg.com/ny/api/res/1.2/oAwNinve3DtbgSfP1JCBNA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/c224a5224663b0bb484aefe3fb82e87a",
+            "alt": "Tzarina Dog Owner"
+        }
+
+    ]
+
+}
