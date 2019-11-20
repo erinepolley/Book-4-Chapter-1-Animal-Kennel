@@ -17,6 +17,19 @@ class OwnerList extends Component {
             })
     }
 
+    deleteOwner = id => {
+        OwnerData.deleteOwner(id)
+            .then(() => {
+                OwnerData.getAll()
+                    .then((newOwners) => {
+                        this.setState({
+                            owners: newOwners
+                        })
+                    })
+            })
+
+    }
+
     render() {
         console.log("OWNER LIST RENDERRR")
         return (
@@ -24,7 +37,11 @@ class OwnerList extends Component {
                 <div className="title">
                     <h1>Our Owners</h1>
                     <div className="container-cards">
-       {this.state.owners.map(owner=> <OwnerCard key={owner.id} owner={owner}/>)}
+                        {this.state.owners.map(owner => <OwnerCard 
+                        key={owner.id} 
+                        owner={owner} 
+                        deleteOwner={this.deleteOwner}
+                        />)}
                     </div>
                 </div>
             </>
