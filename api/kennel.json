@@ -19,6 +19,11 @@
       "id": 4,
       "name": "Esme",
       "breed": "Pitbull"
+    },
+    {
+      "name": "Beasty",
+      "breed": "Doberman",
+      "id": 5
     }
   ],
   "employees": [
@@ -67,6 +72,12 @@
     },
     {
       "id": 2,
+      "name": "West Nashville",
+      "address": "4018A Utah Ave.",
+      "phone": "6159735582"
+    },
+    {
+      "id": 3,
       "name": "West Nashville",
       "address": "4018A Utah Ave.",
       "phone": "6159735582"

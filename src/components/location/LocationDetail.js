@@ -8,7 +8,8 @@ class LocationDetail extends Component {
         //Has to be something here. Can't be blank.
         name: "",
         address: "",
-        phone: ""
+        phone: "",
+        loadingStatus: true
     }
 
     componentDidMount() {
@@ -19,9 +20,17 @@ class LocationDetail extends Component {
                 this.setState({
                     name: location.name,
                     address: location.address,
-                    phone: location.phone
+                    phone: location.phone,
+                    loadingStatus: false
                 });
             });
+    }
+
+    handleDelete = () => {
+        this.setState({loadingStatus: true})
+        LocationData.deleteLocation(this.props.locationId)
+        .then(() => this.props.history.push("/locations"))
+
     }
 
     render() {
@@ -31,6 +40,7 @@ class LocationDetail extends Component {
                     <h3>Name: <span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
                     <p>Address: {this.state.address}</p>
                     <p>Phone: {this.state.phone}</p>
+                <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Report Location Closed (Sry)</button>
                 </div>
             </div>
         );
