@@ -61,15 +61,15 @@
   "locations": [
     {
       "id": 1,
-      "name": "North Nashville"
+      "name": "North Nashville",
+      "address": "2016A 14th Ave N.",
+      "phone": "8179963817"
     },
     {
       "id": 2,
-      "name": "West Nashville1"
-    },
-    {
-      "id": 3,
-      "name": "West Nashville2"
+      "name": "West Nashville",
+      "address": "4018A Utah Ave.",
+      "phone": "6159735582"
     }
   ],
   "owners": [
