@@ -11,6 +11,26 @@ class EmployeeForm extends Component {
         loadingStatus: false
     }
 
+    handleFieldChange = evt => {
+    const stateToChange = {}
+    stateToChange[evt.target.id] = evt.target.value
+    this.setState(stateToChange)
+}
+
+constructNewEmployee = evt => {
+    evt.preventDefault()
+    this.setState({loadingStatus: true})
+    const newEmployee = {
+        name: this.state.name,
+        position: this.state.postion,
+        image: this.state.image,
+        alt: this.state.alt
+    }
+
+    EmployeeData.post(newEmployee)
+    .then(() => this.props.history.push("/employees"))
+}
+
     render() {
         return (
             <>

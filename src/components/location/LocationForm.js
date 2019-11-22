@@ -10,14 +10,34 @@ class LocationForm extends Component {
         loadingStatus: false
     }
 
+    handleFieldChange = evt => {
+        const stateToChange = {}
+        stateToChange[evt.target.id] = evt.target.value
+        this.setState(stateToChange)
+
+    }
+
+    constructNewLocation = evt => {
+        evt.preventDefault()
+        this.setState({loadingStatus: true})
+        const location = {
+            name: this.state.name,
+            address: this.state.address,
+            phone: this.state.phone
+        }
+        LocationData.post(location)
+        .then(() => this.props.history.push("/locations"));
+    }
+
     render() {
+        console.log("LOCATION FORM RENDERING???")
         return (
             <>
                 <form>
                     <fieldset>
                         <div className="formgrid">
                             <input type="text" required onChange={this.handleFieldChange}
-                                id="name" placeholder="eg. Ferdinand Magellan" />
+                                id="name" placeholder="eg. North-Northeast Nashville" />
                             <label htmlFor="">Name</label>
 
                             <input type="text" required onChange={this.handleFieldChange}

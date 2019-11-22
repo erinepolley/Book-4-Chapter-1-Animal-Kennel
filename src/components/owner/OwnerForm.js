@@ -12,6 +12,26 @@ class OwnerForm extends Component {
         loadingStatus: false
     }
 
+handleFieldChange = evt => {
+    const stateToChange = {}
+    stateToChange[evt.target.id] = evt.target.value
+    this.setState(stateToChange)
+}
+
+constructNewOwner = evt => {
+    evt.preventDefault()
+    this.setState({ loadingStatus: true})
+    const owner = {
+        name: this.state.name,
+        phone: this.state.phone,
+        about: this.state.about,
+        image: this.state.image,
+        alt: this.state.alt
+    }
+
+    OwnerData.post(owner)
+    .then(() => this.props.history.push("/owners"))
+}
     render() {
         return (
             <>

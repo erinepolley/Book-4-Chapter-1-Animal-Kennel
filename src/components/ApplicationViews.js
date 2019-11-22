@@ -45,7 +45,7 @@ class ApplicationViews extends Component {
         }} />
 
         <Route exact path="/locations" render={(props) => {
-          return <LocationList />
+          return <LocationList {...props} />
         }} />
 
         <Route path="/locations/:locationId(\d+)" render={(props) => {
@@ -59,16 +59,16 @@ class ApplicationViews extends Component {
             return <LocationForm {...props}/>
         }} />
 
-        <Route path="/employees" render={(props) => {
-          return <EmployeeList />
+        <Route exact path="/employees" render={(props) => {
+          return <EmployeeList {...props}/>
         }} />
 
         <Route path="employees/new" render={(props) => {
           return <EmployeeForm {...props}/>
         }} />
 
-        <Route path="/owners" render={(props) => {
-          return <OwnerList />
+        <Route exact path="/owners" render={(props) => {
+          return <OwnerList {...props} />
         }} />
 
         <Route path="/owners/new" render={(props) => {

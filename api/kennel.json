@@ -16,14 +16,14 @@
       "breed": "Pitbull"
     },
     {
-      "id": 4,
-      "name": "Esme",
-      "breed": "Pitbull"
-    },
-    {
       "name": "Beasty",
       "breed": "Doberman",
       "id": 5
+    },
+    {
+      "name": "Shaboomba",
+      "breed": "Labradoodle",
+      "id": 6
     }
   ],
   "employees": [
