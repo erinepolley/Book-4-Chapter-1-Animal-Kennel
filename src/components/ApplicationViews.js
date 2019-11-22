@@ -12,6 +12,9 @@ import EmployeeForm from './employee/EmployeeForm'
 import LocationForm from './location/LocationForm'
 import OwnerForm from './owner/OwnerForm'
 import AnimalEditForm from "./animal/AnimalEditForm"
+import OwnerEditForm from "./owner/OwnerEditForm"
+import EmployeeEditForm from "./employee/EmployeeEditForm"
+import LocationEditForm from "./location/LocationEditForm"
 
 import Login from './auth/Login'
 //only include these once they are built - previous practice exercise
@@ -61,7 +64,11 @@ class ApplicationViews extends Component {
         />
 
         <Route exact path="/locations" render={(props) => {
-          return <LocationList {...props} />
+          if (this.isAuthenticated()) {
+            return <LocationList {...props} />
+          } else {
+            return <Redirect to="/login" />
+          }
         }} />
 
         <Route path="/locations/:locationId(\d+)" render={(props) => {
@@ -75,21 +82,47 @@ class ApplicationViews extends Component {
           return <LocationForm {...props} />
         }} />
 
+        <Route
+          path="/locations/:locationId(\d+)/edit" render={props => {
+            return <LocationEditForm {...props} />
+          }}
+        />
+
         <Route exact path="/employees" render={(props) => {
-          return <EmployeeList {...props} />
+          if (this.isAuthenticated()) {
+            return <EmployeeList {...props} />
+          } else {
+            return <Redirect to="/login" />
+          }
         }} />
 
         <Route path="/employees/new" render={(props) => {
           return <EmployeeForm {...props} />
         }} />
 
+        <Route
+          path="/employees/:employeeId(\d+)/edit" render={props => {
+            return <EmployeeEditForm {...props} />
+          }}
+        />
+
         <Route exact path="/owners" render={(props) => {
-          return <OwnerList {...props} />
+          if (this.isAuthenticated()) {
+            return <OwnerList {...props} />
+          } else {
+            return <Redirect to="/login" />
+          }
         }} />
 
         <Route path="/owners/new" render={(props) => {
           return <OwnerForm {...props} />
         }} />
+
+        <Route
+          path="/owners/:ownerId(\d+)/edit" render={props => {
+            return <OwnerEditForm {...props} />
+          }}
+        />
       </React.Fragment>
     )
   }
