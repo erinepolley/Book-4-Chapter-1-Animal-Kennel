@@ -41,21 +41,21 @@ class EmployeeList extends Component {
         //the div is jsx, but inside the curly brackets is vanilla javascript. Curly brackets is how you have vanilla js in React.
         return (
             <>
-            <section className="section-content">
-                <button type="button"
-                    className="btn"
-                    onClick={() => { this.props.history.push("/employees/new") }}>
-                    Apply for Employment
+                <section className="section-content">
+                    <button type="button"
+                        className="btn"
+                        onClick={() => { this.props.history.push("/employees/new") }}>
+                        Apply for Employment
             </button>
-            </section>
-            <div className="container-cards">
-                {this.state.employees.map(employee => <EmployeeCard
-                    key={employee.id}
-                    employee={employee}
-                    deleteEmployee={this.deleteEmployee}
-                />
-                )}
-            </div>
+                </section>
+                <div className="container-cards">
+                    {this.state.employees.map(employee => <EmployeeCard
+                        key={employee.id}
+                        employee={employee}
+                        deleteEmployee={this.deleteEmployee}
+                    />
+                    )}
+                </div>
             </>
         )
     }

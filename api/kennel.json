@@ -16,9 +16,9 @@
       "breed": "Pitbull"
     },
     {
-      "name": "Beasty",
-      "breed": "Doberman",
-      "id": 5
+      "id": 5,
+      "name": "Beastie",
+      "breed": "Doberman"
     },
     {
       "name": "Shaboomba",
@@ -61,6 +61,12 @@
       "position": "Dog Therapist",
       "image": "https://thepsychologist.bps.org.uk/sites/thepsychologist.bps.org.uk/files/freud.jpg",
       "alt": "Therapist"
+    },
+    {
+      "name": "Burt Reynolds",
+      "image": "",
+      "alt": "Hotness ",
+      "id": 6
     }
   ],
   "locations": [

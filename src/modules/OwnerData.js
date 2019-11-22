@@ -18,7 +18,8 @@ export default {
   },
 
   post(newOwner) {
-    return fetch(`${remoteURL}/owners`, {
+    return fetch(`${remoteURL}/owners`, 
+    {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

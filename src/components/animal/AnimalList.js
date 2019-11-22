@@ -56,6 +56,8 @@ class AnimalList extends Component {
                             key={animal.id}
                             animal={animal}
                             deleteAnimal={this.deleteAnimal}
+                            //TAKE NOTE THIS SYNTAX!!
+                            {...this.props}
                         />
                     )}
                 </div>

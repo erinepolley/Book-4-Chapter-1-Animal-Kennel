@@ -19,7 +19,7 @@ class LocationForm extends Component {
 
     constructNewLocation = evt => {
         evt.preventDefault()
-        this.setState({loadingStatus: true})
+        this.setState({ loadingStatus: true })
         const location = {
             name: this.state.name,
             address: this.state.address,

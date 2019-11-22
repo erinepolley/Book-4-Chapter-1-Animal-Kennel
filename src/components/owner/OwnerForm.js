@@ -20,7 +20,7 @@ handleFieldChange = evt => {
 
 constructNewOwner = evt => {
     evt.preventDefault()
-    this.setState({ loadingStatus: true})
+    this.setState({ loadingStatus: true })
     const owner = {
         name: this.state.name,
         phone: this.state.phone,
@@ -28,7 +28,7 @@ constructNewOwner = evt => {
         image: this.state.image,
         alt: this.state.alt
     }
-
+    console.log(owner)
     OwnerData.post(owner)
     .then(() => this.props.history.push("/owners"))
 }
@@ -60,7 +60,7 @@ constructNewOwner = evt => {
                         </div>
                         <div className="alignRight">
                             <button type="button" disabled={this.state.loadingStatus}
-                                onClick={this.constructNewEmployee}>Submit</button>
+                                onClick={this.constructNewOwner}>Submit</button>
                         </div>
                     </fieldset>
                 </form>

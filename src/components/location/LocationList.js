@@ -16,7 +16,6 @@ class LocationList extends Component {
         //state is an object, so setState will take object as argument
         LocationData.getAll()
             .then((locationArray) => {
-                //what is animals? line 10?
                 this.setState({
                     locations: locationArray
                 })

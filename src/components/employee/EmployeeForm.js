@@ -32,6 +32,7 @@ constructNewEmployee = evt => {
 }
 
     render() {
+        console.log("SOMETHING")
         return (
             <>
                 <form>
