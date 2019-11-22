@@ -43,6 +43,13 @@ class AnimalList extends Component {
         return (
             <>
                 <h1>Wanna Dog?</h1>
+                <section className="section-content">
+                    <button type="button"
+                        className="btn"
+                        onClick={() => { this.props.history.push("/animals/new") }}>
+                        Admit Animal
+                    </button>
+                </section>
                 <div className="container-cards">
                     {this.state.animals.map(animal =>
                         <AnimalCard

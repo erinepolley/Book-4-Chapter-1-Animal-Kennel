@@ -36,13 +36,17 @@ class OwnerList extends Component {
             <>
                 <div className="title">
                     <h1>Our Owners</h1>
+                    </div>
+                    <section className="section-content">
+                    <button type="button" className="btn" onClick={() => { this.props.history.push("/owners/new") }}>Apply to be a Pup Owner</button>
+                    </section>
                     <div className="container-cards">
                         {this.state.owners.map(owner => <OwnerCard 
                         key={owner.id} 
                         owner={owner} 
                         deleteOwner={this.deleteOwner}
                         />)}
-                    </div>
+                   
                 </div>
             </>
         )

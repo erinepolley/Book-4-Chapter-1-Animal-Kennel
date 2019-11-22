@@ -9,8 +9,20 @@ export default {
   },
   deleteEmp(id) {
     return fetch(`http://localhost:5002/employees/${id}`, {
-        method: "DELETE"
+      method: "DELETE"
     })
-    .then(result => result.json())
+      .then(result => result.json())
+  },
+
+  post(newEmployee) {
+    return fetch(`${remoteURL}/employees`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newEmployee)
+      })
+      .then(response => response.json())
   }
-  }
+}

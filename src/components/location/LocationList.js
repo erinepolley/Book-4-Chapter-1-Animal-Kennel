@@ -37,18 +37,26 @@ class LocationList extends Component {
 
     render() {
         console.log("LOCATION LIST: Render");
-
+        console.log(this.state)
         //the div is jsx, but inside the curly brackets is vanilla javascript. Curly brackets is how you have vanilla js in React.
         return (
             <>
                 <h2>Visit us in either of our awesome locations!</h2>
                 <div className="container-cards">
                     {this.state.locations.map(location => <LocationCard 
+                    //Passing the LocationCard the keys it needs to do its job.
                     key={location.id} 
                     location={location} 
                     deleteLocation={this.deleteLocation}
                     />)}
                 </div>
+                <section className="section-content">
+                    <button type="button"
+                        className="btn"
+                        onClick={() => { this.props.history.push("/locations/new") }}>
+                        Suggest New Location
+                    </button>
+                </section>
             </>
         )
     }
