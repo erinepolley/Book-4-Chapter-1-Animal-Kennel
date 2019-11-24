@@ -19,7 +19,6 @@ class AnimalCard extends Component {
           <button type="button"
             onClick={() => { this.props.history.push(`/animals/${this.props.animal.id}/edit`) }}>Edit</button>
 
-
           <button type="button" onClick={() => this.props.deleteAnimal(this.props.animal.id)}>Release into Wild</button>
 
         </div>

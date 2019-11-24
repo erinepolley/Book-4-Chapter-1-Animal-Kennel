@@ -101,10 +101,9 @@ class ApplicationViews extends Component {
         }} />
 
         <Route
-          path="/employees/:employeeId(\d+)/edit" render={props => {
+          path="/employees/:employeeId(\d+)/edit" render={(props) => {
             return <EmployeeEditForm {...props} />
-          }}
-        />
+          }} />
 
         <Route exact path="/owners" render={(props) => {
           if (this.isAuthenticated()) {
@@ -119,10 +118,9 @@ class ApplicationViews extends Component {
         }} />
 
         <Route
-          path="/owners/:ownerId(\d+)/edit" render={props => {
+          path="/owners/:ownerId(\d+)/edit" render={(props) => {
             return <OwnerEditForm {...props} />
-          }}
-        />
+          }} />
       </React.Fragment>
     )
   }

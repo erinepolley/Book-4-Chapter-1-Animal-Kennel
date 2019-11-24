@@ -50,7 +50,9 @@ class LocationForm extends Component {
                         </div>
                         <div className="alignRight">
                             <button type="button" disabled={this.state.loadingStatus}
-                                onClick={this.constructNewEmployee}>Submit</button>
+                                onClick={this.constructNewLocation}>Submit</button>
+
+
                         </div>
                     </fieldset>
                 </form>

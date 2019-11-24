@@ -11,21 +11,31 @@ export default {
 
   deleteLocation(id) {
     return fetch(`${remoteURL}/locations/${id}`,
-    {
+      {
         method: "DELETE"
-    })
-    .then(result => result.json())
+      })
+      .then(result => result.json())
   },
 
   post(locationObj) {
     return fetch(`${remoteURL}/locations/`,
-    {
+      {
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
+          "Content-Type": "application/json"
         },
         body: JSON.stringify(locationObj)
-    })
-    .then(response=>response.json())
-}
+      })
+      .then(response => response.json())
+  },
+
+  update(editedLocation) {
+    return fetch(`${remoteURL}/locations/${editedLocation.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedLocation)
+    }).then(data => data.json());
+  }
 }
